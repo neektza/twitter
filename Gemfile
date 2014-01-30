@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'jruby-openssl', :platforms => :jruby
 gem 'rake'
 gem 'yard'
+gem 'http', :git => 'https://github.com/tarcieri/http.git'
 
 group :development do
   gem 'pry'
