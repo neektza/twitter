@@ -8,7 +8,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
 
 SimpleCov.start do
   add_filter '/spec/'
-  minimum_coverage(99.3)
+  minimum_coverage(99.27)
 end
 
 require 'twitter'
@@ -64,16 +64,4 @@ end
 
 def fixture(file)
   File.new(fixture_path + '/' + file)
-end
-
-def capture_warning
-  begin
-    old_stderr = $stderr
-    $stderr = StringIO.new
-    yield
-    result = $stderr.string
-  ensure
-    $stderr = old_stderr
-  end
-  result
 end
